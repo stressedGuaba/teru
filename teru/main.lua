@@ -34,6 +34,7 @@ function love.mousepressed(x, y, button)
 end
 ]]
 
+
 local startScreen = require("startScreen")
 local dialoguePage = require("dialoguePage")
 local requestPage = require("requestPage")
@@ -78,6 +79,8 @@ function love.mousepressed(x, y, button)
   if gameState == "start" and button == 1 then
     gameState = "dialogue"
     dialoguePage.load()
+    --i dont need this fo now
+--[[
   elseif gameState == "dialogue" and button == 1 then
     if dialoguePage.hasNext() then
       dialoguePage.next()
@@ -88,15 +91,18 @@ function love.mousepressed(x, y, button)
   elseif gameState == "request" and button == 1 then
     if requestPage.isAccepted() then
       gameState = "room"
-      roomManager.load()
+      livingRoom.load()
     else
       gameState = "start"
       startScreen.load()
     end
   elseif gameState == "room" and button == 1 then
-    roomManager.onClick(x, y)
+    livingRoom.onClick(x, y)
   elseif gameState == "ending" and button == 1 then
     gameState = "start"
     startScreen.load()
+    ]]
   end
 end
+
+--tf

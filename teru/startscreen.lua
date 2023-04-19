@@ -27,7 +27,7 @@ function startScreen.draw()
   love.graphics.setFont(font)
   love.graphics.printf("Teru's Tissues", 0, love.graphics.getHeight()/2 - 50, love.graphics.getWidth(), "center")
   love.graphics.setFont(love.graphics.newFont(12))
-  love.graphics.printf(">Start Game<", 0, love.graphics.getHeight()/2 + 50, love.graphics.getWidth(), "center")
+  love.graphics.printf("click anywhere to start", 0, love.graphics.getHeight()/2 + 50, love.graphics.getWidth(), "center")
 end
 
 return startScreen -- Return the module for use in the main game loop
